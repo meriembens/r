@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Page</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hh.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<!-- Header -->
+<button id="menu-btn">
+  <i class="fa fa-bars"></i> <!-- You can use any icon or text for the menu -->
+</button>
+<header class="header fixed-top">
+    <div class="h-bar">
+        <div class="row align-items-center justify-content-between">
+            <div>
+                <img src="./images/tooth.png" alt="logo">
+                <a href="#home" class="logo">Cabinet<span>Plus</span></a>
+            </div>
+            
+            <nav class="nav">
+                <a href="#home">Accueil</a>
+                <a href="#">Patients</a>
+                <a href="#">Calendrier</a>
+                <div class="dropdown">
+                    <a href="#suivre" class="suivre" >Suivre</a>
+                    <ul class="suivre-menu">
+                        <li><a href="#suivi-produits">Suivi des Produits</a></li>
+                        <li><a href="#suivi-achats">Suivi des Achats</a></li>
+                        <li><a href="#suivi-protheses">Suivi des Prothèses</a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <button class="link-btn">Connexion</button>
+        </div> <!-- End of row -->
+    </div> <!-- End of h-bar -->
+</header>
+
+
+<main>
+  <div class="side-nav">
+    <div class="user">
+      <img src="images/ryry.jpg" class="user-img">
+      <div>
+        <h2>Ryane</h2>
+        <p>ryane@gmail.com</p>
+        </div>
+    </div>
+    <ul>
+      <a href="index.php"><li><img src="images/dashboard.png">
+        <p>Dashboard</p>
+      </li></a>
+      <a href="#"><li><img src="images/members.png">
+        <p>Page de clients</p>
+      </li></a>
+      <a href="./produit/index2.php"><li><img src="images/rewards.png">
+        <p>Pages de produits</p>
+      </li></a>
+      <a href="./produit/index2.php"><li><img src="images/prothese.png">
+        <p>Pages de prothèses</p>
+      </li></a>
+      <a href="#"><li><img src="images/projects.png">
+        <p>Bon d'achat</p>
+      </li></a>
+      <a href="#"><li><img src="images/setting.png">
+        <p>Fournisseur</p>
+      </li></a>
+    </ul>
+
+    <ul>
+      <li><img src="images/logout.png">
+        <p>Deconnexion</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- Main Content: Table displaying client information -->
+<div class="container" style="margin-left: 120px; margin-top: 100px;">
+    <div class="top">
+  <h2>Listes des Clients</h2>
+    <div class="selection">
+      <select id="filters">
+          <option value="tous">Tous les Docteurs</option>
+          <option value="Dr Keciour Nesma">Dr Keciour Nesma</option>
+          <option value="Dr Belhedid Ibtissem">Dr Belhedid Ibtissem</option>
+          <option value="Dr Bensalah Meriem">Dr Bensalah Meriem</option>
+          <option value="Dr Guerroumi Lynda">Dr Guerroumi Lynda</option>
+          <option value="Dr Bouchetara">Dr Bouchetara Ryane</option>
+        </select>            
+  </div>
+</div>
+    <table class="table table-hover text-center">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Phone</th>
+                <th>Date</th>
+                <th>Heure</th>
+                <th>Docteur</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="clients-tbody"></tbody>
+    </table>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="clientsconfirmation.js"></script></script>
+</body>
+</html>

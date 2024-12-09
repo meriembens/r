@@ -1,0 +1,80 @@
+/* General button styles */
+.confirm-btn, .delete-btn {
+    padding: 8px 12px !important;
+    border: none !important;
+    border-radius: 4px !important;
+    color: white !important;
+    font-size: 14px !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease, transform 0.2s ease !important;
+  }
+  
+  /* Confirm button styles */
+  .confirm-btn {
+    background-color: #6475af !important; /* Green */
+  }
+  
+  .confirm-btn:hover {
+    background-color: #6475af !important; /* Darker green on hover */
+    transform: scale(1.05) !important; /* Slightly enlarge */
+  }
+  
+  /* Delete button styles */
+  .delete-btn {
+    background-color: #f04455 !important; /* Red */
+  }
+  
+  .delete-btn:hover {
+    background-color: #f04455 !important; /* Darker red on hover */
+    transform: scale(1.05) !important; /* Slightly enlarge */
+  }
+td {
+    text-align: center !important;
+    margin-top: 10px !important;
+}
+.top {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
+}
+
+.top h2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.top .selection {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+select {
+    appearance: none;
+    font-family: 'Poppins', sans-serif !important;
+    padding: 7px 20px 7px 12px;
+    border: 1px solid #bcbbbb;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    color: #474646;
+    width: 220px;
+}
+
+.selection {
+    position: relative;
+    display: inline-block;
+}
+
+.selection::after {
+    content: "\f078";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
